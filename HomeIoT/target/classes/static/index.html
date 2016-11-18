@@ -1,0 +1,239 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CHESS v.1.0.0.</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/jquery/jquery-3.1.1.min.js"></script>
+  <script src="./js/date.js"></script>
+</head>
+<body class="bg-black">
+  <div class="metro-tile-container">
+
+    <a href="#light-dialog" id="light-link">
+      <div class="metro-tile bg-yellow light-tile">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/switch.png"></div>
+          <div class="tile-label">조명</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="metro-tile bg-pink valve-tile">
+      <div class="tile-item iconic">
+        <div class="image"><img src="./img/valve.png"></div>
+        <div class="tile-label">밸브</div>
+      </div>
+    </div>
+    <div class="metro-tile bg-cyan doorlock-tile">
+      <div class="tile-item iconic">
+        <div class="image"><img src="./img/doorlock.png"></div>
+        <div class="tile-label">도어락</div>
+      </div>
+    </div>
+    <div class="metro-tile bg-green go-out-tile">
+      <div class="tile-item iconic">
+        <div class="image"><img src="./img/home.png"></div>
+        <div class="tile-label">외출모드</div>
+      </div>
+    </div>
+    <a href="#alarm-dialog" id="alarm-link">
+      <div class="metro-tile bg-amber alarm-tile">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/alarm.png"></div>
+          <div class="tile-label">알림</div>
+          <span class="tile-badge bg-darkRed" id="alarm-count">0</span>
+        </div>
+      </div>
+    </a>
+    <div class="metro-tile bg-red firesensor-tile">
+      <div class="tile-item iconic">
+        <div class="image"><img src="./img/firesensor.png"></div>
+        <div class="tile-label">화재감지</div>
+      </div>
+    </div>
+    <div class="metro-tile bg-violet intrusionsensor-tile">
+      <div class="tile-item iconic">
+        <div class="image"><img src="./img/intrusionsensor.png"></div>
+        <div class="tile-label">침입감지</div>
+      </div>
+    </div>
+    <a href="#setting-dialog">
+      <div class="metro-tile bg-cobalt">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/tool.png"></div>
+          <div class="tile-label">설정</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+
+<!-- Light Dialog View -->
+  <div id="light-dialog" class="modalDialog">
+    <div class="close_container">
+      <a href="#close" class="close">
+        <img src="./img/back.png"/>
+      </a>
+    </div>
+    <div class="metro-tile-container bg-black">
+      <div class="metro-tile room" id="room1">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/bulb.png"></div>
+          <div class="tile-label">1번방</div>
+        </div>
+      </div>
+      <div class="metro-tile room" id="room2">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/bulb.png"></div>
+          <div class="tile-label">2번방</div>
+        </div>
+      </div>
+      <div class="metro-tile room" id="room3">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/bulb.png"></div>
+          <div class="tile-label">3번방</div>
+        </div>
+      </div>
+      <div class="metro-tile room" id="room4">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/bulb.png"></div>
+          <div class="tile-label">4번방</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Setting Dialog View -->
+  <div id="setting-dialog" class="modalDialog">
+    <div class="close_container">
+      <a href="#close" class="close">
+        <img src="./img/back.png"/>
+      </a>
+    </div>
+    <div class="metro-tile-container bg-black">
+
+      <a href="#control-log-dialog">
+        <div class="metro-tile bg-yellow control-tile">
+          <div class="tile-item iconic">
+            <div class="image"><img src="./img/control_log.png"></div>
+            <div class="tile-label">제어기록</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#detect-log-dialog">
+        <div class="metro-tile bg-lightRed detect-tile">
+          <div class="tile-item iconic">
+            <div class="image"><img src="./img/detect_log.png"></div>
+            <div class="tile-label">탐지기록</div>
+          </div>
+        </div>
+      </a>
+      
+      <div class="metro-tile bg-cyan">
+        <div class="tile-item iconic">
+          <div class="image"><img src="./img/person.png"></div>
+          <div class="tile-label">정보수정</div>
+        </div>
+      </div>
+
+      <a href="./login.html">
+        <div class="metro-tile bg-green">
+          <div class="tile-item iconic">
+            <div class="image"><img src="./img/logout.png"></div>
+            <div class="tile-label">로그아웃</div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+    
+  </div>
+
+<!-- Control Log Dialog View -->
+  <div id="control-log-dialog" class="modalDialog">
+    <div class="close_container">
+      <a href="#setting-dialog" class="close">
+        <img src="./img/back.png"/>
+      </a>
+    </div>
+
+    <div class="metro-tile-container bg-black" id="control-log">
+
+      <div class="table">
+        <div class="row">
+          <div class="cell control-item" id="control-all"><span>전체</span></div>
+          <div class="cell control-item" id="control-light"><span>조명</span></div>
+          <div class="cell control-item" id="control-valve"><span>밸브</span></div>
+          <div class="cell control-item" id="control-doorlock"><span>도어락</span></div>
+          <div class="cell control-item" id="control-intrusionsensor"><span>외출모드</span></div>
+        </div>
+      </div>
+
+      <table class="log-table" id="control-table">
+        <tr class="log-table-title">
+          <th>순번</th>
+          <th>시간</th>
+          <th>장비</th>
+          <th>명령</th>
+        </tr>
+      </table>
+    </div>
+
+
+  </div>
+
+<!-- Detect Log Dialog View -->
+  <div id="detect-log-dialog" class="modalDialog">
+    <div class="close_container">
+      <a href="#setting-dialog" class="close">
+        <img src="./img/back.png"/>
+      </a>
+    </div>
+
+    <div class="metro-tile-container bg-black" id="detect-log">
+
+      <div class="table">
+        <div class="row">
+          <div class="cell detect-item" id="detect-all"><span>전체</span></div>
+          <div class="cell detect-item" id="detect-firesensor"><span>화재감지</span></div>
+          <div class="cell detect-item" id="detect-intrusionsensor"><span>침입감지</span></div>
+        </div>
+      </div>
+
+      <table class="log-table" id="detect-table">
+        <tr class="log-table-title">
+          <th>순번</th>
+          <th>시간</th>
+          <th>장비</th>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+<!-- Alarm Dialog View -->
+  <div id="alarm-dialog" class="modalDialog">
+    <div class="close_container">
+      <a href="#close" class="close">
+        <img src="./img/back.png"/>
+      </a>
+    </div>
+    <div class="metro-tile-container bg-black" id="alarm-log">
+      <table class="log-table" id="alarm-table">
+        <tr class="log-table-title">
+          <th>순번</th>
+          <th>시간</th>
+          <th>장비</th>
+          <th>상태</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="./js/init.js"></script>
+<script src="./js/log.js"></script>
+<script src="./js/state.js"></script>
+<script src="./js/control.js"></script>
+<script src="./js/event.js"></script>
+</html>

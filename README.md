@@ -33,3 +33,7 @@ C.H.E.S.S (Central HomE Security SysTem)은 인터넷 통신 기술을 홈 시�
 - Server : Apache Tomcat 8.0 / MariaDB 
 - DevTools : InteliJ, CLion
 
+
+---------------------------------
+시연 동영상
+- https://www.youtube.com/watch?v=kL5TpvdQ2zQ

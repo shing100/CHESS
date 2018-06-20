@@ -26,10 +26,10 @@ C.H.E.S.S (Central HomE Security SysTem)은 인터넷 통신 기술을 홈 시�
   
 ---------------------------------
 개발환경 
-- OS Raspbian JESSIE 
-- Language JAVA / HTML / CSS / Javascript / SQL 
-- Framework Spring Framework 
-- Device Raspberry Pi 2, Arduino Uno 3 
-- Server Apache Tomcat 8.0 / MariaDB 
-- DevTools InteliJ, CLion
+- OS : Raspbian JESSIE 
+- Language : JAVA / HTML / CSS / Javascript / SQL 
+- Framework : Spring Framework 
+- Device : Raspberry Pi 2, Arduino Uno 3 
+- Server : Apache Tomcat 8.0 / MariaDB 
+- DevTools : InteliJ, CLion
 
